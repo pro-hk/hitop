@@ -16,9 +16,12 @@
   width: $width;
   height: $height;
 }
-//f(x,y)
+
 @mixin longShadow($bg-color: #000, $direction: right, $num: 100) {
-  // text-shadow:1px 1px 0px rgba()
+  //text-shadow:1px 1px 0px rgba(),
+  //2px 2px 0px rgba(),
+  //2px 2px 0px rgba();
+
   $shadow: "";
   @if ($direction == right) {
     @for $i from 1 to $num {
@@ -33,4 +36,25 @@
   }
   $shadow: unquote($shadow);
   text-shadow: $shadow;
+}
+
+//f(x,y)
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin absCenter() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
