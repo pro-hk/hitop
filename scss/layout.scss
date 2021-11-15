@@ -1,6 +1,5 @@
 @import "vars";
 @import "mixins";
-
 html {
   font-size: 10px;
 }
@@ -29,7 +28,7 @@ img {
   position: fixed;
   width: 100%;
   height: 90px;
-  overflow: hidden;
+  //overflow: hidden;
   transition: all 0.25s ease;
   z-index: 99;
   &.open {
@@ -46,6 +45,7 @@ img {
     right: 0px;
     top: 89px;
     //top: 89px;
+    pointer-events: none;
     background-color: rgba(255, 255, 255, 0.5); // r(0~255),g(0~255),b(0~255),a(0~1)
   }
   .container {
@@ -65,6 +65,18 @@ img {
       .list {
         display: flex;
         > li {
+          position: relative;
+          &:hover {
+            .depth02 {
+              pointer-events: auto;
+              opacity: 1;
+              visibility: visible;
+              transform: translateY(0);
+            }
+            > a {
+              background-color: $main-color;
+            }
+          }
           > a {
             font-size: $medium-size;
             text-transform: capitalize;
@@ -76,10 +88,26 @@ img {
             padding: 0 50px;
           }
           .depth02 {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            width: 100%;
+            padding: 20px 10px;
+            pointer-events: none;
+            box-sizing: border-box;
+            border-radius: 0 0 15px 15px;
+            transform: translateY(50px);
+            transition: all 0.25s ease;
+            background-color: $main-color;
             li {
               a {
                 display: block;
                 padding: 10px 0;
+                &:hover {
+                  background-color: darken($main-color, 10);
+                  border-radius: 5px;
+                  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+                }
               }
             }
           }
@@ -144,14 +172,13 @@ img {
   }
 }
 // header end
-
 #footer {
   background-color: $gray-color;
   color: $white-color;
   .utilMenu {
-    // built in function : darken(color,10)
-    // transparentize(color,0.5)
-    border-bottom: 1px solid transparentize($color: $white-color, $amount: 0.5);
+    // built in function  darken(color,10)
+    // transparentize(color, 0.5)
+    border-bottom: 1px solid transparentize($white-color, 0.5);
     ul {
       display: flex;
       justify-content: center;
@@ -165,7 +192,7 @@ img {
           position: relative;
           &:before {
             @include pseudo();
-            @include box(1px, 7px);
+            @include box(1px, 10px);
             background-color: $white-color;
             left: 0;
             top: 50%;
@@ -175,13 +202,12 @@ img {
       }
     }
   }
-  // utilMenu end
   .addressBox {
     width: 1200px;
     margin: auto;
     padding: 50px 0;
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
     .address {
       margin-left: 50px;
       line-height: 1.5;
@@ -194,7 +220,7 @@ img {
       strong {
         display: block;
         font-size: 3.6rem;
-        font-weight: 700;
+        font-weight: 600;
         margin-top: 20px;
       }
     }
