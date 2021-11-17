@@ -12,9 +12,13 @@
 
 #subContentsWarp #subVisual #lnb .contents .home a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 50px; height: 50px; color: #fff; }
 
+#subContentsWarp #subVisual #lnb .contents .item:hover span { -webkit-transform: rotateX(180deg); transform: rotateX(180deg); }
+
 #subContentsWarp #subVisual #lnb .contents .item:hover ul { display: block; }
 
 #subContentsWarp #subVisual #lnb .contents .item button { width: 200px; height: 50px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 15px; color: #fff; }
+
+#subContentsWarp #subVisual #lnb .contents .item button span { -webkit-transition: 0.25s; transition: 0.25s; }
 
 #subContentsWarp #subVisual #lnb .contents .item ul { border: 1px solid #111111; background-color: #fff; display: none; }
 
@@ -36,7 +40,7 @@
 
 #subContents .subTitle { font-size: 3.6rem; text-align: center; font-weight: 500; }
 
-#subContents .subTitle::after { content: ""; display: block; position: relative; width: 40px; height: 4px; background-color: #bf0c14; margin: 50px auto; }
+#subContents .subTitle:after { content: ""; display: block; position: relative; width: 40px; height: 4px; background: -webkit-gradient(linear, left top, right top, from(orangered), to(#bf0c14)); background: linear-gradient(to right, orangered, #bf0c14); margin: 50px auto; }
 
 #subContents .contents { width: 1200px; margin: auto; }
 
@@ -46,7 +50,7 @@
 
 .tabBox .tabMenu ul li:first-child { border-left: 1px solid #d9d9d9; }
 
-.tabBox .tabMenu ul li.on { background-color: #bf0c14; border-color: #bf0c14; color: #fff; text-shadow: 1px 1px 0px #8f090f,2px 2px 0px #8f090f,3px 3px 0px #8f090f,4px 4px 0px #8f090f,5px 5px 0px #8f090f,6px 6px 0px #8f090f,7px 7px 0px #8f090f,8px 8px 0px #8f090f,9px 9px 0px #8f090f,10px 10px 0px #8f090f,11px 11px 0px #8f090f,12px 12px 0px #8f090f,13px 13px 0px #8f090f,14px 14px 0px #8f090f,15px 15px 0px #8f090f,16px 16px 0px #8f090f,17px 17px 0px #8f090f,18px 18px 0px #8f090f,19px 19px 0px #8f090f,20px 20px 0px #8f090f,21px 21px 0px #8f090f,22px 22px 0px #8f090f,23px 23px 0px #8f090f,24px 24px 0px #8f090f,25px 25px 0px #8f090f,26px 26px 0px #8f090f,27px 27px 0px #8f090f,28px 28px 0px #8f090f,29px 29px 0px #8f090f,30px 30px 0px #8f090f,31px 31px 0px #8f090f,32px 32px 0px #8f090f,33px 33px 0px #8f090f,34px 34px 0px #8f090f,35px 35px 0px #8f090f,36px 36px 0px #8f090f,37px 37px 0px #8f090f,38px 38px 0px #8f090f,39px 39px 0px #8f090f,40px 40px 0px #8f090f;; }
+.tabBox .tabMenu ul li.on { background: -webkit-gradient(linear, left top, right top, from(orangered), to(#bf0c14)); background: linear-gradient(to right, orangered, #bf0c14); border-color: #bf0c14; color: #fff; text-shadow: 1px 1px 0px #8f090f,2px 2px 0px #8f090f,3px 3px 0px #8f090f,4px 4px 0px #8f090f,5px 5px 0px #8f090f,6px 6px 0px #8f090f,7px 7px 0px #8f090f,8px 8px 0px #8f090f,9px 9px 0px #8f090f,10px 10px 0px #8f090f,11px 11px 0px #8f090f,12px 12px 0px #8f090f,13px 13px 0px #8f090f,14px 14px 0px #8f090f,15px 15px 0px #8f090f,16px 16px 0px #8f090f,17px 17px 0px #8f090f,18px 18px 0px #8f090f,19px 19px 0px #8f090f,20px 20px 0px #8f090f,21px 21px 0px #8f090f,22px 22px 0px #8f090f,23px 23px 0px #8f090f,24px 24px 0px #8f090f,25px 25px 0px #8f090f,26px 26px 0px #8f090f,27px 27px 0px #8f090f,28px 28px 0px #8f090f,29px 29px 0px #8f090f,30px 30px 0px #8f090f,31px 31px 0px #8f090f,32px 32px 0px #8f090f,33px 33px 0px #8f090f,34px 34px 0px #8f090f,35px 35px 0px #8f090f,36px 36px 0px #8f090f,37px 37px 0px #8f090f,38px 38px 0px #8f090f,39px 39px 0px #8f090f,40px 40px 0px #8f090f;; }
 
 .history { padding: 100px 0; }
 

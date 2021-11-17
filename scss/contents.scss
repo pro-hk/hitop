@@ -44,6 +44,9 @@
         }
         .item {
           &:hover {
+            span {
+              transform: rotateX(180deg);
+            }
             ul {
               display: block;
             }
@@ -56,6 +59,9 @@
             align-items: center;
             padding: 15px;
             color: $white-color;
+            span {
+              transition: 0.25s;
+            }
           }
           ul {
             border: 1px solid $text-color;
@@ -98,10 +104,10 @@
     font-size: $h2;
     text-align: center;
     font-weight: 500;
-    &::after {
+    &:after {
       @include pseudo(block, relative);
       @include box(40px, 4px);
-      background-color: $main-color;
+      background: linear-gradient(to right, orangered, $main-color);
       margin: 50px auto;
     }
   }
@@ -127,7 +133,8 @@
           border-left: 1px solid $border-color;
         }
         &.on {
-          background-color: $main-color;
+          background: linear-gradient(to right, orangered, $main-color);
+          // linear-gradient ( 방향, 색깔 )
           border-color: $main-color;
           color: $white-color;
           @include longShadow(darken($main-color, 10), right, 40);
