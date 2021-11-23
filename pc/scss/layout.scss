@@ -66,11 +66,12 @@ img {
         display: flex;
         > li {
           &:hover {
-            a {
+            > a {
               background-color: $main-color;
             }
             .depth02 {
-//               display: block;
+              //               display: block;
+              background-color: $main-color;
             }
           }
           > a {
@@ -85,9 +86,10 @@ img {
           }
           .depth02 {
             display: block;
-//             background-color: $main-color;
+            //             background-color: $main-color;
             padding: 20px 10px;
-//             border-radius: 0 0 15px 15px;
+            //             border-radius: 0 0 15px 15px;
+            height: 400px;
             li {
               a {
                 display: block;
