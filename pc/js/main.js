@@ -57,3 +57,6 @@ let isOK = true;
 if (isOK) {
   console.log("나는 참이어서 출력됩니다.");
 }
+
+gsap.from("#mainVisual .slogan .main", { opacity: 0, y: -150, ease: "bounce", duration: 2 });
+gsap.from("#mainVisual .slogan .sub", { opacity: 0, y: -150, ease: "bounce", duration: 2, delay: 2 });
