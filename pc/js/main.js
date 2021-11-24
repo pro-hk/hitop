@@ -1,3 +1,5 @@
+Splitting();
+
 const mainVisualSlider = new Swiper("#mainVisual", {
   autoplay: true,
   speed: 1000,
@@ -58,5 +60,5 @@ if (isOK) {
   console.log("나는 참이어서 출력됩니다.");
 }
 
-gsap.from("#mainVisual .slogan .main", { opacity: 0, y: -150, ease: "bounce", duration: 2 });
-gsap.from("#mainVisual .slogan .sub", { opacity: 0, y: -150, ease: "bounce", duration: 2, delay: 2 });
+gsap.from("#mainVisual .slogan .main .char", { opacity: 0, y: -150, ease: "bounce", duration: 2, stagger: 0.1 });
+gsap.from("#mainVisual .slogan .sub .char", { opacity: 0, y: -150, ease: "bounce", duration: 2, delay: 2, stagger: 0.1 });
