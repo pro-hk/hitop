@@ -40,6 +40,41 @@ gnbList.on("mouseleave", function () {
 });
 */
 
+const popup = $(".popup");
+const btnOneday = popup.find(".oneday");
+const btnClose = popup.find(".close");
+btnOneday.on("click", function () {
+  //popup.hide();
+  Cookies.set("oneday", "one", { expires: 1 });
+  gsap.to(".popup", {
+    duration: 1,
+    top: "-100%",
+    ease: "back.in",
+    onComplete: function () {
+      popup.remove();
+    },
+  });
+});
+//cookie를 이용
+btnClose.on("click", function () {
+  //popup.hide();
+  gsap.to(".popup", {
+    duration: 1,
+    top: "-100%",
+    ease: "back.in",
+    onComplete: function () {
+      popup.remove();
+    },
+  });
+});
+
+console.log(Cookies.get("oneday"));
+if (Cookies.get("oneday") === "one") {
+  popup.hide();
+} else {
+  popup.show();
+}
+
 gnbList.on("mouseenter", function () {
   const selectedDepth02 = $(this).find(".depth02");
   selectedDepth02.stop().slideDown(200);
@@ -49,6 +84,8 @@ gnbList.on("mouseleave", function () {
   selectedDepth02.stop().slideUp(100);
 });
 
+const btnTop = $(".btnTop");
+
 $(window).on("scroll", function () {
   const st = $(window).scrollTop();
   if (st > 0 || !header.hasClass("open")) {
@@ -56,4 +93,15 @@ $(window).on("scroll", function () {
   } else {
     header.removeClass("open");
   }
+  console.log(st);
+  if (st > 1000) {
+    btnTop.addClass("on");
+  } else {
+    btnTop.removeClass("on");
+  }
+});
+
+btnTop.on("click", function () {
+  // $(window).scrollTop(0);
+  gsap.to("html,body", { scrollTop: 0, duration: 0.5 });
 });

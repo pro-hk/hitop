@@ -237,6 +237,19 @@ img {
   }
 }
 
+.btnTop {
+  background-color: $main-color;
+  @include box(80px);
+  position: fixed;
+  right: 50px;
+  bottom: -100px;
+  color: $white-color;
+  z-index: 5;
+  transition: 0.25s;
+  &.on {
+    bottom: 50px;
+  }
+}
 // server side lagnuage
 // java, js, python, php, asp(마이크로소프트)
 
